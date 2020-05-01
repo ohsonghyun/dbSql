@@ -112,7 +112,7 @@ expr1이 null이 아니면 expr1을 리턴
 
 SELECT empno, ename, sal, comm, sal + NVL(comm, 0) AS sal_plus_comm
 FROM emp;
-==>sal + NVL(comm, 0) 둘이 더한 값이 NULL값이면 
+==>sal + NVL(comm, 0) comm의 값이 NULL이면 0을 넣고 계산 
 
 REG_DT 컬럼이 NULL일 경우 현재 날짜가 속한 월의 마지막 일자로 표현
 SELECT userid, usernm, reg_dt, NVL(reg_dt, LAST_DAY(SYSDATE))
